@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::get('/forgot-password', function(){
     return view('auth.password.email');
 })->middleware('quest')->name('password.request');
+
 Route::post('/forgot-password', function(Request $request){
     $request->validate(['email' => 'required|email']);
 
@@ -32,3 +33,10 @@ Route::post('/forgot-password', function(Request $request){
     return $status === Password::RESET_LINK_SENT ? back()->with(['status' => __($status)]) : back()->withErrors(['email' => __($status)]);
 })->middleware('quest')->name('password.email');
 
+
+Route::middleware(['auth'])->group(function(){
+    
+});
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
