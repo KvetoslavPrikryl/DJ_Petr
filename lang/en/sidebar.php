@@ -9,5 +9,8 @@ return[
     'login' => 'Login',
     'remember' => 'Remember Me',
     'forgot' => 'Forgot Your Password?',
-    'login' => 'You are logged in!',
+    'login_pass' => 'You are logged in!',
+    'name'=> 'Enter your name',
+    'message' => 'Enter your message',
+    'send' => 'Send',
 ];

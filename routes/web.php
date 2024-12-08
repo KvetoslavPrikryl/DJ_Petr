@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +36,10 @@ Route::post('/forgot-password', function(Request $request){
     return $status === Password::RESET_LINK_SENT ? back()->with(['status' => __($status)]) : back()->withErrors(['email' => __($status)]);
 })->middleware('quest')->name('password.email');
 
+//EMAIL
+Route::get('contact', [ContactController::class, 'showForm']);
+
+Route::post('send-email', [ContactController::class, 'sendEmail'])->name('send.email');
 
 Route::middleware(['auth'])->group(function(){
     
