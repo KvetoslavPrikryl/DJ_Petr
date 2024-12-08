@@ -13,4 +13,5 @@ return[
     'name' => 'Vaše jméno.',
     'message' => 'Vaše zpráva.',
     'send' => 'Odeslat',
+    'contact' => 'Kontakt',
 ];

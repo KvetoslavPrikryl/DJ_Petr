@@ -16,9 +16,16 @@ use App\Http\Controllers\ContactController;
 |
 */
 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/contact', [ContactController::class, 'showForm'])->name('contact');
+
+//SEND EMAIL
+Route::post('send-email', [ContactController::class, 'sendEmail'])->name('send.email');
 
 //RESET PASSWORD
 
@@ -36,11 +43,7 @@ Route::post('/forgot-password', function(Request $request){
     return $status === Password::RESET_LINK_SENT ? back()->with(['status' => __($status)]) : back()->withErrors(['email' => __($status)]);
 })->middleware('quest')->name('password.email');
 
-//EMAIL
-Route::get('contact', [ContactController::class, 'showForm']);
-
-Route::post('send-email', [ContactController::class, 'sendEmail'])->name('send.email');
-
+//AUTH
 Route::middleware(['auth'])->group(function(){
     
 });

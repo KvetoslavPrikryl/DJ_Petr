@@ -13,4 +13,5 @@ return[
     'name'=> 'Enter your name',
     'message' => 'Enter your message',
     'send' => 'Send',
+    'contact' => 'Contact',
 ];

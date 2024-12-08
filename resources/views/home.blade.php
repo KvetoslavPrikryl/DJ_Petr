@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('sidebar.login') }}
+                    {{ __('sidebar.login_pass') }}
                 </div>
             </div>
         </div>
