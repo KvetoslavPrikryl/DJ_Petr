@@ -14,4 +14,5 @@ return[
     'message' => 'Enter your message',
     'send' => 'Send',
     'contact' => 'Contact',
+    'home' => 'Home',
 ];

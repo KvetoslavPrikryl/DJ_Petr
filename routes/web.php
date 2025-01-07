@@ -18,9 +18,9 @@ use App\Http\Controllers\ContactController;
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/{any}', function () {
+    return view('app');
+})->where('any', '.*');
 
 Route::get('/contact', [ContactController::class, 'showForm'])->name('contact');
 

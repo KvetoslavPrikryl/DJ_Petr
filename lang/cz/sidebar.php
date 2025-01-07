@@ -14,4 +14,5 @@ return[
     'message' => 'Vaše zpráva.',
     'send' => 'Odeslat',
     'contact' => 'Kontakt',
+    'home' => 'Hlavní strana',
 ];
